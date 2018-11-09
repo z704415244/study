@@ -20,7 +20,13 @@ import java.util.Map;
  */
 public class HttpUtils {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(HttpUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(HttpUtils.class);
+
+    // 请求超时时间
+    private static final int socketTimeout = 8000;
+    // 传输超时时间
+    private static final int connectTimeout = 8000;
+
     /**
      *
      * @param url
@@ -30,7 +36,7 @@ public class HttpUtils {
     public static String sendHttpRequest(String url, String jsonString, Map<String, String> header) {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(url);
-        RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(8000).setConnectTimeout(8000).build();//设置请求和传输超时时间
+        RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(socketTimeout).setConnectTimeout(connectTimeout).build();//设置请求和传输超时时间
         httpPost.setConfig(requestConfig);
 
         StringEntity entity = new StringEntity(jsonString, "utf-8");
@@ -47,21 +53,21 @@ public class HttpUtils {
             response = httpClient.execute(httpPost);
             return EntityUtils.toString(response.getEntity());
         } catch (IOException e) {
-            LOGGER.error("http request fail, url = " + url, e);
+            logger.error("http request fail, url = " + url, e);
         } finally {
             if (response != null) {
                 try {
                     response.close();
                     httpClient.close();
                 } catch (IOException e) {
-                    LOGGER.error("http request fail, url = " + url, e);
+                    logger.error("http request fail, url = " + url, e);
                 }
             }
             if (httpClient != null) {
                 try {
                     httpClient.close();
                 } catch (IOException e) {
-                    LOGGER.error("http request fail, url = " + url, e);
+                    logger.error("http request fail, url = " + url, e);
                 }
             }
         }
@@ -76,7 +82,7 @@ public class HttpUtils {
     public static String sendGetRequest(String url, Map<String, String> header) {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpGet httpGet = new HttpGet(url);
-        RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(8000).setConnectTimeout(8000).build();//设置请求和传输超时时间
+        RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(socketTimeout).setConnectTimeout(connectTimeout).build();//设置请求和传输超时时间
         httpGet.setConfig(requestConfig);
         httpGet.setHeader("Content-Type", "application/json");
         if (header != null) {
@@ -89,21 +95,21 @@ public class HttpUtils {
             response = httpClient.execute(httpGet);
             return EntityUtils.toString(response.getEntity());
         } catch (IOException e) {
-            LOGGER.error("http request fail, url = " + url, e);
+            logger.error("http request fail, url = " + url, e);
         } finally {
             if (response != null) {
                 try {
                     response.close();
                     httpClient.close();
                 } catch (IOException e) {
-                    LOGGER.error("http request fail, url = " + url, e);
+                    logger.error("http request fail, url = " + url, e);
                 }
             }
             if (httpClient != null) {
                 try {
                     httpClient.close();
                 } catch (IOException e) {
-                    LOGGER.error("http request fail, url = " + url, e);
+                    logger.error("http request fail, url = " + url, e);
                 }
             }
         }
