@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  #使用哪个配置文件
+  profiles:
+    active: dev
+
+  #数据库连接
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: root
+
+  #配置JPA
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  #配置热部署
+  thymeleaf:
+    cache: true
+  devtools:
+    restart:
+      #热部署生效
+      enabled: true
+      #设置重启的目录
+      additional-paths: src/main/java
+      #排除哪个目录不需要restart
+      #exclude:

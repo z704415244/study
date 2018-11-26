@@ -1,0 +1,36 @@
+    Java基础  编码规范    Java底层/调优           
+                
+"
+     
+           
+                        
+                        
+                        
+                        
+                        
+                    
+技术及工具：
+    spring框架, Redis, RocketMQ, Zookeeper, Dubbo, WebSocket, ELK(log), grafana（图形化）, Prometheus - Monitoring system（数据采集）               
+
+语言：
+    html, python, shell
+
+书籍：
+    Java基础：
+        《Think In Java》、《深入理解JVM虚拟机》、《深入分析Java Web》技术内幕、
+        《MySQL技术内幕 InnoDB存储引擎》、《spring源码深度解析》、《并发编程实战》、《并发编程的艺术》  
+
+    编码规范：
+        《Effective Java》、《The art of readable 
+
+    架构：
+        《大型网站技术架构：核心原理与案例分析》                    
+
+其他：
+    设计模式， HTTP相关，中间件                           
+                        
+                        
+                        
+                        
+                        
+                        
