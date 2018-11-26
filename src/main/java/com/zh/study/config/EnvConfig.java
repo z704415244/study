@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.net.InetAddress;
 
-@Configuration("envConfig")
+//@Configuration("envConfig")
 public class EnvConfig {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());

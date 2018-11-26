@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket</title>
+</head>
+
+
+<script>
+    // var Socket = new WebSocket(url, [protocol] );
+
+    // 初始化一个 WebSocket 对象
+    var ws = new WebSocket("ws://127.0.0.1:8080/myHandler");
+
+    // 建立 web socket 连接成功触发事件
+    ws.onopen = function () {
+        // 使用 send() 方法发送数据
+        ws.send("send message");
+        // alert("数据发送中...");
+    };
+
+    // 接收服务端数据时触发事件
+    ws.onmessage = function (evt) {
+        var received_msg = evt.data;
+        alert("数据已接收...");
+    };
+
+    // 断开 web socket 连接成功触发事件
+    ws.onclose = function () {
+        // alert("连接已关闭...");
+    };
+
+</script>
+
+
+<body>
+
+
+<form action="/default/send" method="get">
+    <input name = "name" ><br/>
+    <input name = "password"><br/>
+    <input type="submit" value="submit"><br/>
+</form>
+
+</body>
+</html>
