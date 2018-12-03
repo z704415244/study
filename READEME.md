@@ -18,7 +18,7 @@ text
 
 ## 插入链接
 
-[百度](www.baidu.com)
+[Markdown语法](https://www.jianshu.com/p/191d1e21f7ed)
 
 ## 插入图片
 
@@ -30,8 +30,8 @@ text
 
 ## 代码块
 
-`
+...
 public static void main(String[] args){
     System.out.println("Hello World");
 }
-`
+...
