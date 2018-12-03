@@ -22,4 +22,16 @@ text
 
 ## 插入图片
 
-[icon](http://25.io/mou/Mou_128.png)
+![icon](http://25.io/mou/Mou_128.png)
+
+## 分割线
+
+***
+
+## 代码块
+
+`
+public static void main(String[] args){
+    System.out.println("Hello World");
+}
+`
