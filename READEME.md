@@ -1,4 +1,4 @@
-##session共享
+## session共享
 
     通过共享集群中机器的session来保证session同步
     缺点：服务器处理请求时，需要和其他建立session共享的服务器建立链接，导致性能下降，不推荐
