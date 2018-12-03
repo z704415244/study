@@ -30,8 +30,8 @@ text
 
 ## 代码块
 
-...
+```
 public static void main(String[] args){
     System.out.println("Hello World");
 }
-...
+```
