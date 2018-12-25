@@ -1,0 +1,8 @@
+java:
+  lang:
+    Integer:
+      IntegerCache:
+        high:200
+
+server:
+  port: 8080

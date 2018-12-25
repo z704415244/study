@@ -14,18 +14,18 @@ import java.util.Date;
  * @Date 2018/11/9
  */
 @RestController
-@RequestMapping("/default")
+@RequestMapping("/")
 public class DefaultController {
 
     private static final Logger logger = LoggerFactory.getLogger(DefaultController.class);
 
-    @RequestMapping("/send")
+    @RequestMapping("send")
     public void send(@RequestParam String name, @RequestParam String password){
         logger.info("receive message success, name={}, password={}", name, password);
         new Date().getTime();
     }
 
-    @RequestMapping("/hello")
+    @RequestMapping("hello")
     @ResponseBody
     public String hello(){
         logger.info("Hello World!");

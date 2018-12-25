@@ -1,9 +1,16 @@
 package com.zh.study.util;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
+import com.google.gson.Gson;
+import com.zh.study.bean.Goods;
+import com.zh.study.bean.Info;
+import com.zh.study.bean.User;
+import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.lang.reflect.Field;
+import java.math.BigInteger;
+import java.util.Random;
 
 /**
  * @Author yexun
@@ -11,22 +18,16 @@ import java.util.Map;
  */
 public class Demo {
 
+    @Test
+    public void function() {
 
-    public static void main(String[] args) {
-        Map<Integer,String> map = new HashMap<>();
-        map.put(1, "aa");
-        String s = JSON.toJSON(map).toString();
-        System.out.println(s);
-        System.out.println(JSON.toJSONString(map));
+
+
+
+
+
+
 
     }
 
-
-    static int add(int... a) {
-        int sum = 0;
-        for (int i = 0; i < a.length; i++) {
-            sum += a[i];
-        }
-        return sum;
-    }
 }
