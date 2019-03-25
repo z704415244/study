@@ -6,3 +6,14 @@ java:
 
 server:
   port: 8080
+
+
+channelConfig:
+  channel:
+    - channelId: 40001
+      token: df03f81e-9561-442c-8068-f40f304a81a5
+      username: Connectadmin
+      userId: 225
+      currencyCode: 1000
+
+id: 100
