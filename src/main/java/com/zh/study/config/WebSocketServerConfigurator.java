@@ -11,7 +11,7 @@ import javax.websocket.server.ServerEndpointConfig;
  * @Author yexun
  * @Date 2018/11/9
  */
-@Component
+//@Component
 public class WebSocketServerConfigurator extends ServerEndpointConfig.Configurator {
 
 
