@@ -1,6 +1,6 @@
-package com.zh.study.utils;
+package com.zh.study.spring;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -17,7 +17,7 @@ import java.util.Properties;
  * @Date 2019-09-25
  */
 @Component("springBeanUtil")
-@Log4j2
+@Slf4j
 public class SpringBeanUtil implements ApplicationContextAware {
 
     private static ApplicationContext ctx = null;
